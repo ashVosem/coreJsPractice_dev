@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     new HTMLPlugin({
+      //filename: 'index.[chunkhash].html',
       template: './src/index.html'
     }),
     new CleanWebpackPlugin()
