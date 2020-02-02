@@ -1,12 +1,19 @@
 /**
  * Body CSS
  */
-
  html,
  body {
    height: 100%;
  }
  
+ body{
+   background-image: url(/rocket_big.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+ }
+.rocket{
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(0, 0, 0,0) 100%);
+}
  html,
  body,
  input,
@@ -16,8 +23,7 @@
    -moz-osx-font-smoothing: grayscale;
    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
  }
- 
- 
+  
  /**
   * Sidebar CSS
   */
@@ -36,18 +42,18 @@
      height: 100%;
      padding-top: 30px;
    }
- }
- 
- 
- /**
-  * Content CSS
-  */
-
- @media (min-width: 768px) {
    #content {
-     margin-left: 180px;
+    margin-left: 180px;
+  }
+   body{
+     background-image: url(/rocket_background.jpg);
+   }
+   .wrapper #up{
+     transform: unset;
    }
  }
+ 
+
 
 /**
   * Naming under Sidebar
@@ -75,14 +81,16 @@ div > .label--input-text{
   margin: 2em auto;
   border: 1px solid #8B008B;
   overflow: hidden;
-  color: rgb(253, 247, 247);
-  background-color: rgb(199, 178, 224);
+  color: rgb(0, 0, 0);
+  background-color: rgb(199, 178, 224,0.6);
   border-width: 0 5px 5px 0;
   border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 1.2rem;
 }
 
 #form{
-  padding-top: 2.2em;
+  padding-top: 2.9em;
 }
 
 
@@ -90,6 +98,21 @@ div > .label--input-text{
   margin-bottom: 0.5rem;
 }
 
+
+
 #form > .preinput-text{
   padding-bottom: 1em;
+}
+
+#up{
+  position: fixed;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+a{
+  text-decoration: none;
+  color: #8B008B;
+  opacity: .7;
 }

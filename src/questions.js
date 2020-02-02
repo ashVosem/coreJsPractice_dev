@@ -20,7 +20,7 @@ export class Question {
 
     const html = questions.length
     ? questions.map(toCard).join('')
-    : `<div class="mui--text-headline">Пока что вопросов нет :(</div>`
+    : `<div class="mui--text-headline">Пока что рифм нема :(</div>`
 
     const questionsList = document.getElementById('questionsList')
     questionsList.innerHTML = html
@@ -30,7 +30,7 @@ export class Question {
 
 function addToLocalStorage(question){
   const all = getQuestionsFromLocalStorage()
-  all.push(question)
+  all.unshift(question)
   localStorage.setItem('questions[]',JSON.stringify(all))
 }
 function getQuestionsFromLocalStorage() {
